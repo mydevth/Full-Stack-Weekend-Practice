@@ -1,10 +1,7 @@
 import React from "react";
 import Fact from "./Fact";
-import { initialFacts } from "../DataSource/InitialFacts";
 
-const FactList = () => {
-  const facts = initialFacts;
-
+const FactList = ({ facts }) => {
   return (
     <section>
       <ul className="facts-list">
