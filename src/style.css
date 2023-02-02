@@ -17,6 +17,15 @@ body {
   display: none !important;
 }
 
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 32px;
+  margin-top: 24px;
+  color: green;
+}
+
 /* MAIN LAYOUT */
 #root {
   max-width: 1500px;
