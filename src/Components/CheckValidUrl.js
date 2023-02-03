@@ -1,4 +1,5 @@
-const CheckValidUrl = ({ source }) => {
+const CheckValidUrl = (source) => {
+  console.log(source);
   let url;
   try {
     url = new URL(source);

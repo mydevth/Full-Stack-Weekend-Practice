@@ -6,7 +6,6 @@ import CategoryFilter from "./Components/CategoryFilter";
 import FactList from "./Components/FactList";
 import { useEffect, useState } from "react";
 import Loader from "./Components/Loader";
-import CategoryTest from "./DataSource/CategoryTest";
 
 // import { initialFacts } from "./DataSource/InitialFacts";
 
@@ -46,8 +45,11 @@ function App() {
       ) : null}
       <main className="main">
         <CategoryFilter setCurrentCategory={setCurrentCategory} />
-        {isLoading ? <Loader /> : <FactList facts={facts} />}
-        <CategoryTest />
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <FactList facts={facts} setFacts={setFacts} />
+        )}
       </main>
     </>
   );

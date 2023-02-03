@@ -1,3 +1,4 @@
+// JSON data for test local data before we get from Supabase
 export const initialFacts = [
   {
     id: 1,
