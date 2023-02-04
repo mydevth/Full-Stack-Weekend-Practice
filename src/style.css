@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@100;400;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +8,7 @@ body {
   background-color: #292524;
   color: #fafaf9;
   font-family: "Sono", sans-serif;
-  padding: 48px 64px;
+  padding: 48px 64px 0px;
 }
 
 .hidden {
@@ -20,10 +18,15 @@ body {
 .message {
   text-align: center;
   text-transform: uppercase;
-  font-weight: 600;
   font-size: 32px;
+  font-weight: 600;
   margin-top: 24px;
-  color: green;
+}
+
+.disputed {
+  color: #ef4444;
+  font-weight: 600;
+  margin-right: 10px;
 }
 
 /* MAIN LAYOUT */
@@ -34,8 +37,6 @@ body {
 
 .header {
   margin-bottom: 40px;
-  padding: 10px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,15 +46,24 @@ body {
   display: grid;
   grid-template-columns: 250px 1fr;
   gap: 48px;
+
+  height: calc(100vh - 48px - 68px - 40px);
 }
 
 @media (max-width: 900px) {
   .main {
     grid-template-columns: 1fr;
+    /* Fixed in a video text overlay, to fix scrolling issue on small screens */
+    height: auto;
   }
 }
 
-/* ELEMENTS  */
+section {
+  overflow: scroll;
+  padding-bottom: 40px;
+}
+
+/* ELEMENTS */
 
 .logo {
   display: flex;
@@ -128,11 +138,15 @@ h1 {
   font-family: inherit;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .vote-buttons button:hover {
   background-color: #292524;
+}
+
+.vote-buttons button:disabled {
+  background-color: #44403c;
 }
 
 ul {
@@ -144,7 +158,7 @@ ul {
   color: #a8a29e;
   text-decoration: none;
   margin-left: 12px;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .source:hover,
@@ -158,12 +172,12 @@ ul {
   line-height: 1;
   text-transform: uppercase;
   font-size: 17px;
-  padding: 16px 0px 13px;
+  padding: 16px 0 13px;
   background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
   color: inherit;
   border-radius: 100px;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -179,6 +193,7 @@ ul {
   margin-bottom: 16px;
   width: 100%;
 }
+
 .btn-category {
   width: 100%;
   background-image: none;
@@ -218,12 +233,12 @@ ul {
 .fact-form span {
   font-weight: 600;
   font-size: 18px;
-  margin-right: 16px;
+  margin-right: 18px;
 }
 
 @media (max-width: 1000px) {
   body {
-    padding: 32px 48px;
+    /* padding: 32px 48px; */
   }
 
   .fact-form {
