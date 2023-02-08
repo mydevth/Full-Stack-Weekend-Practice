@@ -5,7 +5,7 @@
 #### Tools
 - React Developer Tool
 - npm install @supabase/supabase-js
-#### Result :  https://react-stephen-pdas.netlify.app/
+#### Result :  https://listlearned.netlify.app
 
 #### References
 - https://medium.com/@austinpaley32/how-to-add-a-constants-file-to-your-react-project-6ce31c015774
